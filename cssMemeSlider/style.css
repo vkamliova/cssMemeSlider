@@ -46,6 +46,7 @@ body {
 
 .name {
   display: none;
+  animation: 3s show ease;
 }
 
 input {
@@ -111,6 +112,7 @@ label:active > .btn {
 #btn-5:checked ~ .meme-wrapper > .m5 {
   visibility: visible;
   width: 100%;
+  animation: 3s show ease;
 }
 
 #btn-1:checked ~ .name-and-btn > .name-wrapper > .name-1,
@@ -125,5 +127,14 @@ label:active > .btn {
   .name-and-btn {
     flex-direction: column-reverse;
     row-gap: 1rem;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
