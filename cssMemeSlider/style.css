@@ -9,6 +9,8 @@ body {
   font-family: "Audiowide", sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
@@ -16,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 65rem;
 }
 
 .meme-wrapper {
@@ -98,15 +101,6 @@ label:active > .btn {
 #btn-4:checked:hover ~ .name-and-btn .btns-wrapper #b-4 .btn,
 #btn-5:checked:hover ~ .name-and-btn .btns-wrapper #b-5 .btn {
   background-color: #cfcfcf;
-}
-
-#btn-1:checked:active ~ .name-and-btn .btns-wrapper #b-1 .btn,
-#btn-2:checked:active ~ .name-and-btn .btns-wrapper #b-2 .btn,
-#btn-3:checked:active ~ .name-and-btn .btns-wrapper #b-3 .btn,
-#btn-4:checked:active ~ .name-and-btn .btns-wrapper #b-4 .btn,
-#btn-5:checked:active ~ .name-and-btn .btns-wrapper #b-5 .btn {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
 }
 
 #btn-1:checked ~ .meme-wrapper > .m1,
