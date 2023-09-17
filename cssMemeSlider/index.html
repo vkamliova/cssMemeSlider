@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
     <title>cssMemeSlider</title>
@@ -11,37 +12,42 @@
 
 <body>
     <div class="wrapper">
+        <input type="radio" name="slider" id="btn-1" checked>
+        <input type="radio" name="slider" id="btn-2">
+        <input type="radio" name="slider" id="btn-3">
+        <input type="radio" name="slider" id="btn-4">
+        <input type="radio" name="slider" id="btn-5">
         <div class="meme-wrapper">
-            <img class="meme meme-1" src="./assets/meme-1.jpg" alt="meme-1">
-            <img class="meme" src="./assets/meme-2.jpg" alt="meme-2">
-            <img class="meme" src="./assets/meme-3.jpg" alt="meme-3">
-            <img class="meme" src="./assets/meme-4.jpg" alt="meme-4">
-            <img class="meme" src="./assets/meme-5.jpg" alt="meme-5">
+            <img class="meme m1" src="./assets/meme-1.jpg" alt="meme-1">
+            <img class="meme m2" src="./assets/meme-2.jpg" alt="meme-2">
+            <img class="meme m3" src="./assets/meme-3.jpg" alt="meme-3">
+            <img class="meme m4" src="./assets/meme-4.jpg" alt="meme-4">
+            <img class="meme m5" src="./assets/meme-5.jpg" alt="meme-5">
         </div>
         <div class="name-and-btn">
             <div class="name-wrapper">
-                <div class="name name-1 meme-name-1">А думал, что пофиксил</div>
+                <div class="name name-1">А думал, что пофиксил</div>
                 <div class="name name-2">Разметка, а не программирование</div>
                 <div class="name name-3">Типы имеют значение</div>
                 <div class="name name-4">Ну почему-у-у</div>
                 <div class="name name-5">Поймай это</div>
             </div>
             <div class="btns-wrapper">
-                <label>
+                <label for="btn-1" id="b-1">
                     <span class="btn"></span>
-                    <input checked type="radio" name="slider" id="btn-1"></label>
-                <label>
+                </label>
+                <label for="btn-2" id="b-2">
                     <span class="btn"></span>
-                    <input type="radio" name="slider" id="btn-2"></label>
-                <label>
+                </label>
+                <label for="btn-3" id="b-3">
                     <span class="btn"></span>
-                    <input type="radio" name="slider" id="btn-3"></label>
-                <label>
+                </label>
+                <label for="btn-4" id="b-4">
                     <span class="btn"></span>
-                    <input type="radio" name="slider" id="btn-4"></label>
-                <label>
+                </label>
+                <label for="btn-5" id="b-5">
                     <span class="btn"></span>
-                    <input type="radio" name="slider" id="btn-5"></label>
+                </label>
             </div>
         </div>
     </div>

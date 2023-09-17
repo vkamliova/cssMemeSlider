@@ -6,7 +6,9 @@ body {
   background: #dcdcdc;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .wrapper {
@@ -18,22 +20,30 @@ body {
 
 .meme-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
 }
 
 .name-and-btn {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  column-gap: 15em;
+  min-width: 75%;
   max-width: 75%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .meme {
   max-width: 90%;
+  visibility: hidden;
+  width: 0%;
 }
+
+.name {
+  display: none;
+}
+
 input {
   display: none;
 }
@@ -60,12 +70,12 @@ label {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  outline: 0.15rem solid rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
+  outline: 0.12rem solid #000000e3;
 }
 
 label:hover > .btn {
-  background-color: white;
+  background-color: #cfcfcf;
   transition: 0.5s;
 }
 
@@ -73,16 +83,45 @@ label:active > .btn {
   transform: scale(1.2);
 }
 
-label:has(input:checked) .btn {
+#btn-1:checked ~ .name-and-btn .btns-wrapper #b-1 .btn,
+#btn-2:checked ~ .name-and-btn .btns-wrapper #b-2 .btn,
+#btn-3:checked ~ .name-and-btn .btns-wrapper #b-3 .btn,
+#btn-4:checked ~ .name-and-btn .btns-wrapper #b-4 .btn,
+#btn-5:checked ~ .name-and-btn .btns-wrapper #b-5 .btn {
   background-color: rgb(0, 0, 0);
   transform: none;
 }
 
-label:has(input:checked):hover .btn {
-  background-color: rgba(150, 100, 155, 0.3);
+#btn-1:checked:hover ~ .name-and-btn .btns-wrapper #b-1 .btn,
+#btn-2:checked:hover ~ .name-and-btn .btns-wrapper #b-2 .btn,
+#btn-3:checked:hover ~ .name-and-btn .btns-wrapper #b-3 .btn,
+#btn-4:checked:hover ~ .name-and-btn .btns-wrapper #b-4 .btn,
+#btn-5:checked:hover ~ .name-and-btn .btns-wrapper #b-5 .btn {
+  background-color: #cfcfcf;
 }
 
-label:has(input:checked):active .btn {
+#btn-1:checked:active ~ .name-and-btn .btns-wrapper #b-1 .btn,
+#btn-2:checked:active ~ .name-and-btn .btns-wrapper #b-2 .btn,
+#btn-3:checked:active ~ .name-and-btn .btns-wrapper #b-3 .btn,
+#btn-4:checked:active ~ .name-and-btn .btns-wrapper #b-4 .btn,
+#btn-5:checked:active ~ .name-and-btn .btns-wrapper #b-5 .btn {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
+}
+
+#btn-1:checked ~ .meme-wrapper > .m1,
+#btn-2:checked ~ .meme-wrapper > .m2,
+#btn-3:checked ~ .meme-wrapper > .m3,
+#btn-4:checked ~ .meme-wrapper > .m4,
+#btn-5:checked ~ .meme-wrapper > .m5 {
+  visibility: visible;
+  width: 100%;
+}
+
+#btn-1:checked ~ .name-and-btn > .name-wrapper > .name-1,
+#btn-2:checked ~ .name-and-btn > .name-wrapper > .name-2,
+#btn-3:checked ~ .name-and-btn > .name-wrapper > .name-3,
+#btn-4:checked ~ .name-and-btn > .name-wrapper > .name-4,
+#btn-5:checked ~ .name-and-btn > .name-wrapper > .name-5 {
+  display: block;
 }
