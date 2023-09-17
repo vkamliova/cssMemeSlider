@@ -6,9 +6,9 @@ body {
   background: #dcdcdc;
   height: 100vh;
   display: flex;
-  font-family: "Audiowide", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
   align-items: center;
   justify-content: center;
 }
@@ -41,6 +41,7 @@ body {
   max-width: 90%;
   visibility: hidden;
   width: 0%;
+  padding: 1.5rem 0;
 }
 
 .name {
@@ -118,4 +119,11 @@ label:active > .btn {
 #btn-4:checked ~ .name-and-btn > .name-wrapper > .name-4,
 #btn-5:checked ~ .name-and-btn > .name-wrapper > .name-5 {
   display: block;
+}
+
+@media (max-width: 475px) {
+  .name-and-btn {
+    flex-direction: column-reverse;
+    row-gap: 1rem;
+  }
 }
