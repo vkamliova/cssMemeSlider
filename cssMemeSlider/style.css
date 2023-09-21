@@ -19,6 +19,7 @@ body {
   align-items: center;
   flex-direction: column;
   max-width: 65rem;
+  row-gap: 1rem;
 }
 
 .meme-wrapper {
@@ -31,9 +32,7 @@ body {
 .name-and-btn {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
-  min-width: 75%;
-  max-width: 75%;
+  width: 81%;
   justify-content: space-between;
 }
 
@@ -41,12 +40,17 @@ body {
   max-width: 90%;
   visibility: hidden;
   width: 0%;
-  padding: 1.5rem 0;
 }
 
 .name {
   display: none;
   animation: 4s show ease;
+  word-break: break-all;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 input {
@@ -68,6 +72,7 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin: 0 -0.5rem 0 0;
 }
 
 .btn {
@@ -126,12 +131,17 @@ label:active > .btn {
 @media (max-width: 500px) {
   .name-and-btn {
     flex-direction: column-reverse;
-    row-gap: 1rem;
     min-width: 80%;
+    row-gap: 1rem;
   }
 
   .name-wrapper {
     width: 100%;
+  }
+
+  .btns-wrapper {
+    justify-content: center;
+    margin: 0%;
   }
 }
 
