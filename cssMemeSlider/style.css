@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+}
+
+body {
+  background: #dcdcdc;
+  height: 100vh;
+  display: flex;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 65rem;
+  row-gap: 1rem;
+}
+
+.meme-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+}
+
+.name-and-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 81%;
+  justify-content: space-between;
+}
+
+.meme {
+  max-width: 90%;
+  visibility: hidden;
+  width: 0%;
+}
+
+.name {
+  display: none;
+  animation: 4s show ease;
+  word-break: break-all;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.btns-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #00000080;
+  outline: 0.12rem solid #000000e3;
+}
+
+label:hover > .btn {
+  background-color: #cfcfcf;
+  transition: 0.5s;
+}
+
+label:active > .btn {
+  transform: scale(1.2);
+}
+
+#btn-1:checked ~ .name-and-btn .btns-wrapper #b-1 .btn,
+#btn-2:checked ~ .name-and-btn .btns-wrapper #b-2 .btn,
+#btn-3:checked ~ .name-and-btn .btns-wrapper #b-3 .btn,
+#btn-4:checked ~ .name-and-btn .btns-wrapper #b-4 .btn,
+#btn-5:checked ~ .name-and-btn .btns-wrapper #b-5 .btn {
+  background-color: rgb(0, 0, 0);
+  transform: none;
+}
+
+#btn-1:checked:hover ~ .name-and-btn .btns-wrapper #b-1 .btn,
+#btn-2:checked:hover ~ .name-and-btn .btns-wrapper #b-2 .btn,
+#btn-3:checked:hover ~ .name-and-btn .btns-wrapper #b-3 .btn,
+#btn-4:checked:hover ~ .name-and-btn .btns-wrapper #b-4 .btn,
+#btn-5:checked:hover ~ .name-and-btn .btns-wrapper #b-5 .btn {
+  background-color: #cfcfcf;
+}
+
+#btn-1:checked ~ .meme-wrapper > .m1,
+#btn-2:checked ~ .meme-wrapper > .m2,
+#btn-3:checked ~ .meme-wrapper > .m3,
+#btn-4:checked ~ .meme-wrapper > .m4,
+#btn-5:checked ~ .meme-wrapper > .m5 {
+  visibility: visible;
+  width: 100%;
+  animation: 4s show ease;
+}
+
+#btn-1:checked ~ .name-and-btn > .name-wrapper > .name-1,
+#btn-2:checked ~ .name-and-btn > .name-wrapper > .name-2,
+#btn-3:checked ~ .name-and-btn > .name-wrapper > .name-3,
+#btn-4:checked ~ .name-and-btn > .name-wrapper > .name-4,
+#btn-5:checked ~ .name-and-btn > .name-wrapper > .name-5 {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .name-and-btn {
+    flex-direction: column-reverse;
+    min-width: 80%;
+    row-gap: 1rem;
+  }
+
+  .name-wrapper {
+    width: 100%;
+  }
+
+  .btns-wrapper {
+    justify-content: center;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
