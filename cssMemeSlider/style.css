@@ -72,7 +72,6 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 0 -0.5rem 0 0;
 }
 
 .btn {
@@ -141,7 +140,6 @@ label:active > .btn {
 
   .btns-wrapper {
     justify-content: center;
-    margin: 0%;
   }
 }
 
